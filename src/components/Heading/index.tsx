@@ -1,6 +1,11 @@
 import styles from './styles.module.css';
 
-export default function Heading() {
-  console.log(styles)
-  return <div className={styles.heading}>headig</div>;
+type HeadingProps = {
+  children: string;
+};
+
+export default function Heading({ children }: HeadingProps) {
+
+  return <div className={styles.heading}>{children}</div>;
+  
 }
